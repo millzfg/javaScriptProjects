@@ -1,7 +1,9 @@
+//This program is a basic black jack card counting system that adds or subtracts a value for a defined variable (count) and determines whether to Hold or Bet (hit) the player's dealt cards
+
 let count = 0; //stores incremental value of cards dealt
 
 function cc(card) { //main function that adds or subtracts value to the count variable depending on card dealt
-  // Only change code below this line
+  
   if (card >= 2 && card <= 6) { //condition for cards 2-6
     count ++;
   }
@@ -19,7 +21,7 @@ function cc(card) { //main function that adds or subtracts value to the count va
       return count + ' Hold';
     }
     
-  // Only change code above this line
+  
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A'); // test: cards dealt
