@@ -1,0 +1,25 @@
+let count = 0; //stores incremental value of cards dealt
+
+function cc(card) { //main function that adds or subtracts value to the count variable depending on card dealt
+  // Only change code below this line
+  if (card >= 2 && card <= 6) { //condition for cards 2-6
+    count ++;
+  }
+    else if (card <= 7 && card <= 9) { //condition for cards 7-9
+      let count = count;
+    }
+      else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') { //condition for cards 10-A
+        count--;
+      }
+
+  if (count > 0) { //executes if count is positive
+    return count + ' Bet';
+  }
+    else { //executes if count is 0 or negative
+      return count + ' Hold';
+    }
+    
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A'); // test: cards dealt
