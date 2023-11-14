@@ -1,4 +1,4 @@
-//This program takes a num and performs a factorial
+//This program takes a number and performs a factorial
 
 function factorialize(num) {
   let oldNum = 1;  //Variable needed to iterate through the values up to num
