@@ -1,13 +1,15 @@
+//This program accepts a string as an argument, reverses the order of the string, and returns the new reversed string.
+
 function reverseString(str) {
-  let newStr = "";
-  let newArr = [];
-  const arr = str.split("");
-  for(let i = arr.length - 1; i >= 0; i--){
+  let newStr = "";  //empty string to store the new reversed string
+  let newArr = [];  //empty array to store an array of the individual characters in the string in reverse order
+  const arr = str.split(""); 
+  for(let i = arr.length - 1; i >= 0; i--){  //iterates through the str argument and adds each character(including spaces) as an individual string to the array newArr
     newArr.push(arr[i]);
   }
-  for(let j = 0; j < newArr.length; j++){
+  for(let j = 0; j < newArr.length; j++){  //iterates through the new array of characters and adds them to the empty string newStr
     newStr = newStr + newArr[j];
   }
-  str = newStr;
-  return str;
+  str = newStr;  //sets the value of str as the new reversed string
+  return str;  
 }
