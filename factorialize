@@ -1,0 +1,17 @@
+//This program takes a num and performs a factorial
+
+function factorialize(num) {
+  let oldNum = 1;  //Variable needed to iterate through the values up to num
+  if(num != 0 || num != 1){  //Factorializing numbers greater than 1
+    for(let i = num; i >= 1; i--){
+      oldNum = oldNum * i;  //Multiplies all number sequentially from 1 to n(num)
+    }
+  }
+  else{
+    num = 1;  //Values 0 and 1 will always return 1
+  }
+  num = oldNum;
+  return num;
+}
+
+factorialize(5);
