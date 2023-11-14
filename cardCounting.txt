@@ -7,7 +7,7 @@ function cc(card) { //main function that adds or subtracts value to the count va
   if (card >= 2 && card <= 6) { //condition for cards 2-6
     count ++;
   }
-    else if (card <= 7 && card <= 9) { //condition for cards 7-9
+    else if (card >= 7 && card <= 9) { //condition for cards 7-9
       let count = count;
     }
       else if (card == 10 || card == 'J' || card == 'Q' || card == 'K' || card == 'A') { //condition for cards 10-A
