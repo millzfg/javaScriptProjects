@@ -1,0 +1,17 @@
+//This program takes an argument(arr) which has 4 sub-arrays containing 4 numbers, and takes the largest of each sub-array's number and creates a new array with the largest number in each sub-array
+
+function largestOfFour(arr) {
+  let newArr = [];  //Array to add largest numbers
+  let highVal;  //Variable storing highest value of each iteration of sub-arrays
+  for(let i = 0; i < arr.length; i++){  //Iteration of each sub-array
+    highVal = arr[i][0];  //Sets the first value in each sub-array as the highest
+    for(let j = 1; j < arr[i].length; j++){  //Tests the value of the first sub-array number against the remaining numbers in the array
+      if(highVal < arr[i][j]){  //Condition setting new highVal if number is larger than the subsequent number 
+        highVal = arr[i][j];
+      }
+    }
+    newArr.push(highVal);  //After iterating through array of numbers adds largest number to a new array
+  }
+  arr = newArr;  //sets the value of the old array(arr) to the new array
+  return arr;  //returns the new array with the largest numbers
+}
