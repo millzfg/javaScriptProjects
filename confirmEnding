@@ -1,0 +1,11 @@
+//This program takes two arguments a str(word or sentence(s)) and target(string) and checks to see if the target is located at the end of str
+
+function confirmEnding(str, target) { 
+  for(let i = 1; i <= target.length; i++){  //Iteration through each letter in target and tests if each letter starting from the end of target matches to the str
+    if(target.substring(target.length - i) == str.substring(str.length - i) && target.length == i){
+      return true;  //Returns true if the length of the target is reached and all letters match
+    }else if(target.substring(target.length - i) != str.substring(str.length - i)){  
+        return false;  //Returns false if the letters don't match before reaching the length of target
+    }
+  }
+}
