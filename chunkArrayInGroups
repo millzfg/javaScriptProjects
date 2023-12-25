@@ -1,0 +1,28 @@
+//This function produces a two-dimensional array by taking an array of elements and sorting them into separate arrays by a given "size" parameter. Any excess values are put into an array together. 
+
+function chunkArrayInGroups(arr, size) {
+  let tempArr = [];  //Stores temporary elemnts to group by size
+  let newArr = [];  //Stores final arrays with sized elements along with excess values
+  let counter = size;  //Counter to sort elements by size
+  for(let i = 0; i < arr.length; i++){
+    if(counter > 0){  //Executes if size value has not been reached
+      tempArr.push(arr[i]);
+      counter--;
+      if(counter == 0){  //Pushes values of sized array into new array. Resets tempArr/counter variables.
+        newArr.push(tempArr);
+        tempArr = [];
+        counter = size;
+      }
+    }else if(counter > 0 && size > arr.length - i){  //Executes if the remaining elements are less than size
+        tempArr.push(arr[i]);
+        counter--;
+        if(i == arr.length - 1){
+          newArr.push(tempArr);
+        }
+    }
+  }
+  if(tempArr.length > 0){  //Inserts the excess elements into the new array
+  newArr.push(tempArr);
+  }
+  return newArr;
+}
